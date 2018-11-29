@@ -1,0 +1,11 @@
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\bin\Debug\Stroberi.exe.config
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\bin\Debug\Stroberi.exe
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\bin\Debug\Stroberi.pdb
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.csprojAssemblyReference.cache
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.Form1.resources
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.Properties.Resources.resources
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.csproj.GenerateResource.cache
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.csproj.CoreCompileInputs.cache
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.exe
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.pdb
+C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.RGB_Form.resources

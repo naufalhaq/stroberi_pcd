@@ -12,10 +12,14 @@ namespace Stroberi
 {
     public partial class Form1 : Form
     {
+        Bitmap bmp;
+        double totalRed,totalGreen,totalBlue;
         public Form1()
         {
             InitializeComponent();
+            labelKeterangan.Visible = false;
         }
+
 
         private static int truncate(int x)
         {
@@ -30,13 +34,15 @@ namespace Stroberi
             return x;
         }
 
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog bukaFile = new OpenFileDialog();
             bukaFile.Filter = "Image File (*.bmp, *.jpg, *.jpeg)|*.bmp;*.jpg;*.jpeg";
             if (DialogResult.OK == bukaFile.ShowDialog())
             {
-                this.pictureBox1.Image = new Bitmap(bukaFile.FileName);
+                bmp = new Bitmap(bukaFile.FileName);
+                this.pictureBox1.Image = bmp;
                 toolStripStatusLabel1.Text = bukaFile.FileName + " |  Resolusi " + pictureBox1.Image.Width + " X " + pictureBox1.Image.Height;
             }
         }
@@ -119,6 +125,55 @@ namespace Stroberi
                 }
                 frm5.ShowDialog();
             }
+        }
+
+        private void proses_Click(object sender, EventArgs e)
+        {
+            int wid = bmp.Width;
+            int hei = bmp.Height;
+
+            //double valuess = Convert.ToDouble(val);
+            //double f = (259 * (valuess + 255)) / (255 * (259 - valuess));
+            Color p;
+            progressBar1.Maximum = hei;
+            progressBar1.Visible = true;
+            for (int y = 0; y < hei; y++)
+            {
+                for (int x = 0; x < wid; x++)
+                {
+                    p = bmp.GetPixel(x, y);
+                    //double a = p.A*Math.Log10(1 + valuess);
+                    if (p.R != 255 && p.G != 255 && p.B != 255)
+                    {
+                        totalRed += p.R;
+                        totalBlue += p.B;
+                        totalGreen += p.G;
+
+                    }
+
+                    //double r = valuess * (p.R - 128) + 128;
+                    //double g = valuess * (p.G - 128) + 128;
+                    //double b = valuess * (p.B - 128) + 128;
+                    //bmpbuffer.SetPixel(x, y, Color.FromArgb(trunc(Convert.ToInt16(r)), trunc(Convert.ToInt16(g)), trunc(Convert.ToInt16(b))));
+                }
+                progressBar1.Value = y;
+            }
+            redLabel.Text = "RED = "+totalRed.ToString();
+            blueLabel.Text = "BLUE = " + totalBlue.ToString();
+            greenLabel.Text = "GREEN = " + totalGreen.ToString();
+            if ((totalRed - totalGreen) < 0 && (totalGreen - totalBlue) > 110000)
+            {
+                labelKeterangan.Text = "MENTAH";
+            }
+            else
+            {
+                labelKeterangan.Text = "MATANG";
+            }
+            labelKeterangan.Visible = true;
+            totalGreen = 0;totalRed = 0;totalBlue = 0;
+            
+            //pictureBox2.Image = bmpbuffer;
+            progressBar1.Visible = false;
         }
     }
 }

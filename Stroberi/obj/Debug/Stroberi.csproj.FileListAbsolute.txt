@@ -9,3 +9,13 @@ C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.csproj.Cor
 C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.exe
 C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.pdb
 C:\Users\Naufal Haq\source\repos\Stroberi\Stroberi\obj\Debug\Stroberi.RGB_Form.resources
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\bin\Debug\Stroberi.exe.config
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.exe
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.pdb
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\bin\Debug\Stroberi.exe
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\bin\Debug\Stroberi.pdb
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csprojResolveAssemblyReference.cache
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.Form1.resources
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.Properties.Resources.resources
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.RGB_Form.resources
+D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csproj.GenerateResource.Cache

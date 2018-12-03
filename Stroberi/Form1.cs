@@ -131,6 +131,7 @@ namespace Stroberi
         {
             int wid = bmp.Width;
             int hei = bmp.Height;
+            double totalPix = wid * hei;
 
             //double valuess = Convert.ToDouble(val);
             //double f = (259 * (valuess + 255)) / (255 * (259 - valuess));
@@ -158,9 +159,9 @@ namespace Stroberi
                 }
                 progressBar1.Value = y;
             }
-            redLabel.Text = "RED = "+totalRed.ToString();
-            blueLabel.Text = "BLUE = " + totalBlue.ToString();
-            greenLabel.Text = "GREEN = " + totalGreen.ToString();
+            redLabel.Text = "RED = "+(totalRed/totalPix).ToString();
+            blueLabel.Text = "BLUE = " + (totalBlue / totalPix).ToString();
+            greenLabel.Text = "GREEN = " + (totalGreen / totalPix).ToString();
             if ((totalRed - totalGreen) < 0 && (totalGreen - totalBlue) > 110000)
             {
                 labelKeterangan.Text = "MENTAH";

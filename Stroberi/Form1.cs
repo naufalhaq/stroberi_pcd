@@ -49,81 +49,55 @@ namespace Stroberi
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void inputToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void histo() {
             if (pictureBox1.Image == null)
-                MessageBox.Show("Tidak ada citra yang akan diolah");
+            {
+                MessageBox.Show("Tak ada Gambar");
+            }
             else
             {
-                double[] HistoR = new double[256];
-                double[] HistoG = new double[256];
-                double[] HistoB = new double[256];
-                Bitmap b = new Bitmap((Bitmap)this.pictureBox1.Image);
-                RGB_Form frm5 = new RGB_Form();
-                for (int i = 0; i < 255; i++)
+                Form1 histogForm = new Form1();
+                //histogForm.histoRchart.Series["Gray"].Points.Clear();
+                int[] histoR = new int[256];
+                int[] histoG = new int[256];
+                int[] histoB = new int[256];
+                Bitmap bpms = new Bitmap(pictureBox1.Image);
+                int wid = bpms.Width;
+                int hei = bpms.Height;
+
+                Color p;
+                progressBar1.Maximum = hei;
+                progressBar1.Visible = true;
+                for (int y = 0; y < hei; y++)
                 {
-                    HistoR[i] = 0;
-                    HistoG[i] = 0;
-                    HistoB[i] = 0;
-                }
-                for (int i = 0; i <= 255; i++)
-                {
-                    for (int j = 0; j <= 255; j++)
+                    for (int x = 0; x < wid; x++)
                     {
-                        Color c1 = b.GetPixel(i, j);
-                        int merah = c1.R;
-                        int hijau = c1.G;
-                        int biru = c1.B;
-                        HistoR[merah]++;
-                        HistoG[hijau]++;
-                        HistoB[biru]++;
+                        p = bpms.GetPixel(x, y);
+
+                        histoR[p.R] = histoR[p.R] + 1;
+                        histoG[p.G] = histoG[p.G] + 1;
+                        histoB[p.B] = histoB[p.B] + 1;
+
                     }
-                    progressBar1.Value = Convert.ToInt16(100 * (i + 1) / b.Width);
+                    progressBar1.Value = y;
                 }
+
+                histoRchart.Series["Red"].Points.DataBindY(histoR);
+                histoRchart.Series["Red"].Color = Color.Red;
+                histoRchart.Series["Green"].Points.DataBindY(histoG);
+                histoRchart.Series["Green"].Color = Color.Green;
+                histoRchart.Series["Blue"].Points.DataBindY(histoB);
+                histoRchart.Series["Blue"].Color = Color.Blue;
+
                 progressBar1.Visible = false;
-
-                frm5.chart1.Series["Series1"].Color = Color.Red;
-                frm5.chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
-                frm5.chart1.ChartAreas["ChartArea1"].AxisY.LabelStyle.Enabled = false;
-
-                foreach (Double HstR in HistoR)
-
-                {
-                    for (int i = 0; i <= 255; i++)
-                    {
-                        frm5.chart1.Series["Series1"].Points.AddXY(i, HistoR[i]);
-                    }
-                }
-
-                frm5.chart2.Series["Series1"].Color = Color.Green;
-                frm5.chart2.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
-                frm5.chart2.ChartAreas["ChartArea1"].AxisY.LabelStyle.Enabled = false;
-
-                foreach (Double HstG in HistoG)
-
-                {
-                    for (int i = 0; i <= 255; i++)
-                    {
-                        frm5.chart2.Series["Series1"].Points.AddXY(i, HistoG[i]);
-                    }
-                }
-
-                frm5.chart3.Series["Series1"].Color = Color.Blue;
-                frm5.chart3.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
-                frm5.chart3.ChartAreas["ChartArea1"].AxisY.LabelStyle.Enabled = false;
-
-                foreach (Double HstB in HistoB)
-
-                {
-                    for (int i = 0; i <= 255; i++)
-                    {
-                        frm5.chart3.Series["Series1"].Points.AddXY(i, HistoB[i]);
-                    }
-                }
-                frm5.ShowDialog();
             }
         }
 
@@ -175,6 +149,8 @@ namespace Stroberi
             
             //pictureBox2.Image = bmpbuffer;
             progressBar1.Visible = false;
+
+            histo();
         }
     }
 }

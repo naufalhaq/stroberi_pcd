@@ -19,3 +19,13 @@ D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debu
 D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.Properties.Resources.resources
 D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.RGB_Form.resources
 D:\NFNT\COLLEGE\SEVENTH SEMESTER\IMAGE PROCESSING\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csproj.GenerateResource.Cache
+E:\source\repos\stroberi_pcd\Stroberi\bin\Debug\Stroberi.exe.config
+E:\source\repos\stroberi_pcd\Stroberi\bin\Debug\Stroberi.exe
+E:\source\repos\stroberi_pcd\Stroberi\bin\Debug\Stroberi.pdb
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csprojAssemblyReference.cache
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.Form1.resources
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.Properties.Resources.resources
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csproj.GenerateResource.cache
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.csproj.CoreCompileInputs.cache
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.exe
+E:\source\repos\stroberi_pcd\Stroberi\obj\Debug\Stroberi.pdb
